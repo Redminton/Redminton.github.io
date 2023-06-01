@@ -2,7 +2,7 @@
     text-align: left;
     align-items: left;
     margin-left: 10px;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 #brilho2{
     transition-duration: 1.0s;
@@ -159,6 +159,12 @@ opacity: 0.6;
     margin-left: -8px;
     margin-right: -8px;
     
+}
+.desc{
+    margin-top: 10px;
+    color: #ffffff;
+    margin: auto;
+    font-family: Arial, sans-serif;
 }
 
 
