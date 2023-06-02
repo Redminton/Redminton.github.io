@@ -151,7 +151,7 @@ opacity: 0.6;
 }
 .animacao_placa{
 transition-duration: 1.0s;
-opacity: 0.5;
+opacity: 0.3;
 }
 .animacao_placa:hover{
     opacity: 1;
