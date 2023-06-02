@@ -165,5 +165,9 @@ opacity: 0.6;
     margin: auto;
     font-family: Arial, sans-serif;
 }
+#p3060{
+    display: flex;
+    justify-content: center;
+}
 
 
