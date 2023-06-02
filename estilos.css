@@ -81,7 +81,7 @@
 }
 #grad {
     background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(39, 30, 30), #f5793b);
-    height: 100%;
+    
     z-index: -1;
   }
 #brilho:hover{
