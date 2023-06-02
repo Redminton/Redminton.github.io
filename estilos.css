@@ -143,6 +143,7 @@ opacity: 0.6;
     color: #ffffff;
     margin: auto;
     font-family: Arial, sans-serif;
+    border-radius: 8px;
 }
 #p3060{
     display: flex;
@@ -156,6 +157,23 @@ opacity: 0.5;
     opacity: 1;
     width: 600px;
     cursor: zoom-in;
+}
+.nome{
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(253, 147, 60, 0.473);
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: large;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+h1{
+    margin: 0%;
+}
+h3{
+    margin: 0%;
 }
 
 
