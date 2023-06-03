@@ -183,6 +183,7 @@ h3{
 }
 #anima2:hover{
  background-image: none;
+ height: 200px;
 }
 #centro{
     text-align: center;
