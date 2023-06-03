@@ -179,11 +179,11 @@ h3{
     margin: 0%;
 }
 #anima2{
-    transition-duration: 1.0s;
+    transition-duration: 0.5s;
 }
 #anima2:hover{
  background-image: none;
- height: 200px;
+
 }
 #centro{
     text-align: center;
