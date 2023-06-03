@@ -182,8 +182,7 @@ h3{
     transition-duration: 1.0s;
 }
 #anima2:hover{
-    height: 200px;
-    width: 200px;
+ background-image: none;
 }
 #centro{
     text-align: center;
