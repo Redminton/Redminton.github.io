@@ -98,7 +98,8 @@ opacity: 0.6;
     color: #ffffff;
 }
 .produtos{
-    margin: auto;
+    margin-left:  10%;
+    margin-right: 10%;
 }
 .botao
 {
@@ -116,6 +117,8 @@ opacity: 0.6;
     color: floralwhite;
     cursor: pointer;
     border: none;
+    text-align: center;
+    justify-content: center;
 }
 .botao1
 {
@@ -174,6 +177,18 @@ h1{
 }
 h3{
     margin: 0%;
+}
+#anima2{
+    transition-duration: 1.0s;
+}
+#anima2:hover{
+    height: 200px;
+    width: 200px;
+}
+#centro{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
