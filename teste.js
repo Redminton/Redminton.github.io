@@ -1,5 +1,8 @@
+let num1 = 2;
+let num2 = 5;
+let num3 = 8;
+let med;
 
-const frutas = ["maça","banana", "laranja"];
-for(let i=0;  i<3; i++);{
-console.log(frutas[i]);
-console.log(frutas.length);}
+med = (num1 + num2 + num3) / 3
+console.log(med)
+
