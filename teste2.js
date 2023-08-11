@@ -1,4 +1,5 @@
+
 const fru = ["morango", "banana", "pera"]
-for(let i=0;i<3;i++);{
-    console.log(fru[i]);
+for(let cont=0;cont<3;cont++){
+    console.log(fru[cont]);
 }
