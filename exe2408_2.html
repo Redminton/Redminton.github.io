@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="0308.css" type="text/css" />
-    <title>Exercício 1 24/08</title>
+    <title>Exercício 2 24/08</title>
 
 </head>
 <body style="background-image: linear-gradient(black, white); height: 700px;">
     <div>
-        <input type="text" id="num1" value=""><span style="color: aqua;"> Digite seu item</span></input><br>
+        <input type="text" id="num1" value=""><span style="color: aqua;"> Digite seu item:</span></input><br>
            <br>
         <input type="button" value="+" onclick="adicionar()"></input>
     </div>
@@ -25,16 +25,27 @@
         <h2><a href="exe2408_2.html">Acesse o Exercício 2</a></h2>
     </div>
    <script>
-    function adicionar(){
-    var x= document.getElementById("num1").value;
-    while (x != "sair"){
-          let y = [x +=x];
-        var lista =[];
-        lista.push(y);
-        console.log(lista);
-    }
-    document.getElementById("resultado").innerHTML= lista; }
-   </script> 
+            function adicionar() {
+            var x = document.getElementById("num1").value;
+            if (x == "sair") {
+                document.getElementById("resultado").innerHTML = ("Sua lista é: ", lista.join(', '));
+                console.log(lista);
+                console.log("sair");
+            } else {
+                lista.push(x);
+                document.getElementById("resultado").innerHTML = "";
+                console.log("else");
+                console.log("x", x);
+                console.log("lista:", lista);
+            }
+        }
 
+        var lista = [];
+        document.getElementById("num1").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+   </script> 
 </body>
 </html>
