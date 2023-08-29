@@ -9,14 +9,9 @@
 </head>
 <body style="background-image: linear-gradient(black, white); height: 700px;">
     <div>
-        <input type="number" id="num1" value=""><span style="color: aqua;">Digite seu primeiro número</span></input><br>
-            <input type="number" id="num2" value=""><span style="color: aqua;">Digite seu segundo número</span></input><br>
+        <input type="text" id="num1" value=""><span style="color: aqua;"> Digite seu item</span></input><br>
            <br>
-        <input type="button" value="+" onclick="somar()"></input>
-        
-        <input type="button" value="-" onclick="menos()"></input>
-        <input type="button" value="*" onclick="vezes()"></input>
-        <input type="button" value="/" onclick="divd()"></input>
+        <input type="button" value="+" onclick="adicionar()"></input>
     </div>
     <div class="resposta">
         <h1><p id="resultado"></p></h1>
@@ -30,31 +25,15 @@
         <h2><a href="exe2408_2.html">Acesse o Exercício 2</a></h2>
     </div>
    <script>
-    function somar(){  
-        var x = document.getElementById("num1").value;
-        var y = document.getElementById("num2").value;
-                        mais  = Number(x)+Number(y);
-                        console.log(x);
-                        document.getElementById("resultado").innerHTML = mais; }
-    function menos(){  
-        var x = document.getElementById("num1").value;
-        var y = document.getElementById("num2").value;
-                        menor  = Number(x) - Number(y);
-                        console.log(x);
-                        document.getElementById("resultado").innerHTML = menor; }
-    function vezes(){  
-        var x = document.getElementById("num1").value;
-        var y = document.getElementById("num2").value;
-                        multi  = Number(x) * Number(y);
-                        console.log(x);
-                        document.getElementById("resultado").innerHTML = multi; }
-    function divd(){  
-        var x = document.getElementById("num1").value;
-        var y = document.getElementById("num2").value;
-                        divi  = Number(x) / Number(y);
-                        console.log(x);
-                        document.getElementById("resultado").innerHTML = divi; }
-
+    function adicionar(){
+    var x= document.getElementById("num1").value;
+    while (x != "sair"){
+          let y = [x +=x];
+        var lista =[];
+        lista.push(y);
+        console.log(lista);
+    }
+    document.getElementById("resultado").innerHTML= lista; }
    </script> 
 
 </body>
