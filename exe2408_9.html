@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="0308.css" type="text/css" />
+    <title>Exercício 9 24/08</title>
+</head>
+<body style="background-image: linear-gradient(black, white); height: 700px;">
+    <div>
+        <input type="number" id="num1" value=""><span style="color: aqua;"> 
+            Digite a quantidade de números sorteados: </span>
+        <br>
+        <input type="number" id="num2" value=""><span style="color: aqua;"> 
+            Digite o primeiro número possível a ser sorteado: </span>
+        <br>
+        <input type="number" id="num3" value=""><span style="color: aqua;"> 
+            Digite o último número possível a ser sorteado: </span>
+        <br><br>
+        <input type="button" value="Sortear" onclick="adicionar()"></input>
+    </div>
+    <div class="resposta">
+        <h1><p id="resultado"></p></h1>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <div class="perf2">
+        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2>
+        <h2><a href="exe2.html">Acesse o Exercício 2 aqui!</a></h2>
+        <h2><a href="exe2408_1.html">Acesse o Exercício da Calculadora</a></h2>
+        <h2><a href="exe2408_2.html">Acesse o Exercício da Lista de Compras</a></h2>
+        <h2><a href="exe2408_3.html">Acesse o Exercício do conversor C em Fh</a></h2>
+        <h2><a href="exe2408_4.html">Acesse o Exercício do maior menor</a></h2>
+        <h2><a href="exe2408_5.html">Acesse o Exercício do verificador de email</a></h2>
+        <h2><a href="exe2408_6.html">Acesse o Exercício do verificador de número primo</a></h2>
+        <h2><a href="exe2408_9.html">Acesse o Exercício do sorteio da Mega Sena</a></h2>
+    </div>
+    <script>
+        function adicionar() {
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+            var z = parseInt(document.getElementById("num3").value);
+            var resultado = [];
+
+            for(var i = 0; i < x; i++){
+                var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
+                resultado.push(aleatorio);
+            }
+            document.getElementById("resultado").innerHTML = "Números sorteados: " + resultado.join(", ");
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("num3").value = "";
+        }
+        document.getElementById("num1").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("num2").focus();
+            }
+        });
+        document.getElementById("num2").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("num3").focus();
+            }
+        });
+        document.getElementById("num3").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+              adicionar();
+            }
+        });
+
+    </script>
+</body>
+</html>
