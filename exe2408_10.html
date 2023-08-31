@@ -41,25 +41,8 @@
     <script>
         function adicionar() {
             var x = parseInt(document.getElementById("num1").value);
-            var y = parseInt(document.getElementById("num2").value);
-            var z = parseInt(document.getElementById("num3").value);
-            var resultado = [];
-            while (resultado.length < x) {
-            var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
+
             
-            if (!resultado.includes(aleatorio)) {
-                resultado.push(aleatorio);
-                                                }
-                                        }
-            /*for(var i = 0; i < x; i++){
-                var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
-                resultado.push(aleatorio);
-            }*/
-            document.getElementById("resultado").innerHTML = "Números sorteados: " + resultado.join(", ");
-            document.getElementById("num1").value = "";
-            document.getElementById("num2").value = "";
-            document.getElementById("num3").value = "";
-            console.log(resultado);
         }
         document.getElementById("num1").addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
