@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="0308.css" type="text/css" />
+    <title>Exercício 3 24/08</title>
+
+</head>
+<body style="background-image: linear-gradient(black, white); height: 700px;">
+    <div>
+        <input type="number" id="num1" value=""><span style="color: aqua;"> Digite sua temperatura em Graus Celsius: </span></input><br>
+           <br>
+        <input type="number" id="num2" value=""><span style="color: aqua;"> Digite sua temperatura em Graus FahrenHeit: </span></input><br>
+        <br>
+        <input type="button" value="Converter" onclick="adicionar()"></input>
+    </div>
+    <div class="resposta">
+        <h1> Graus F°<p id="resultado"></p></h1><br>
+        <h1> Graus C°<p id="resultado2"></p></h1><br>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>    
+    <div class="perf2">
+        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2> 
+        <h2><a href="index.html">Acesse a Página Inicial</a></h2>
+        <h2><a href="exe2408_2.html">Acesse o Exercício da Lista de compras</a></h2>
+        <h2><a href="exe2408_1.html">Acesse o Exercício da Calculadora</a></h2>
+        <h2><a href="exe2408_4.html">Acesse o Exercício do maior menor</a></h2>
+    </div>
+   <script>
+            function adicionar() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+           if(x > 0){ 
+            var f = (x * 1.8) + 32;
+        
+            document.getElementById("resultado").innerHTML = f; 
+            }
+            if(y >0){
+            var g = (y - 32) / 1.8;
+            document.getElementById("resultado2").innerHTML = g;
+            }
+            console.log(f);
+            console.log(g);
+            }
+        
+
+        var lista = [];
+        document.getElementById("num1").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+        document.getElementById("num2").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+   </script> 
+</body>
+</html>
