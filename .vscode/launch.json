@@ -15,8 +15,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/joao/Documents/GitHub/Redminton.github.io",
-      "program": "c:/Users/joao/Documents/GitHub/Redminton.github.io/build/Debug/outDebug",
+      "cwd": "extension-output-ms-vscode.cpptools-#2-C",
+      "program": "extension-output-ms-vscode.cpptools-#2-C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
