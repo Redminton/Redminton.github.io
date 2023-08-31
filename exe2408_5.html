@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="0308.css" type="text/css" />
-    <title>Exercício 4 24/08</title>
+    <title>Exercício 5 24/08</title>
 
 </head>
 <body style="background-image: linear-gradient(black, white); height: 700px;">
     <div>
-        <input type="number" id="num1" value=""><span style="color: aqua;"> Digite um número: </span></input><br>
+        <input type="email" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span></input><br>
            <br>
-        <input type="button" value="Menor ou Maior?" onclick="adicionar()"></input>
+        <input type="button" value="Verificar" onclick="adicionar()"></input>
     </div>
     <div class="resposta">
         <h1><p id="resultado"></p></h1>
@@ -25,20 +25,18 @@
         <h2><a href="exe2408_2.html">Acesse o Exercício da Lista de compras</a></h2>
         <h2><a href="exe2408_1.html">Acesse o Exercício da Calculadora</a></h2>
         <h2><a href="exe2408_3.html">Acesse o Exercício do Celsius para Fahrenheit</a></h2>
-        <h2><a href="exe2408_5.html">Acesse o Exercício do verificador de email</a></h2>
+        <h2><a href="exe2408_4.html">Acesse o Exercício do Menor Maior</a></h2>
+        <h2><a href="exe2408_6.html">Acesse o Exercício de verificador de número primo</a></h2>
     </div>
    <script>
-            const numA = Math.floor(Math.random() * 100) + 1;
-            console.log(numA);
             function adicionar() {
-                var x = parseFloat(document.getElementById("num1").value);
+                var x = document.getElementById("num1").value;
+                var emailpadrao = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
            
-            if (x < numA) {
-                document.getElementById("resultado").innerHTML = "Mais";
-            } else if (x > numA) {
-                document.getElementById("resultado").innerHTML = "Menos";
+                if (emailpadrao.test(x)) {
+                document.getElementById("resultado").innerHTML = "O endereço de email é válido.";
             } else {
-                document.getElementById("resultado").innerHTML = "Você acertou o número!";
+                document.getElementById("resultado").innerHTML = "O endereço de email é inválido.";
             }
             document.getElementById("num1").value = "";
             }
