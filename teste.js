@@ -1,8 +1,13 @@
-let num1 = 2;
-let num2 = 5;
-let num3 = 8;
-let med;
+var readline = require('readline');
+var resp = "";
 
-med = (num1 + num2 + num3) / 3
-console.log(med)
+var leitor = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
+leitor.question("Qual módulo pra ler dados no node.js?\n", function(answer) {
+    var resp = answer;
+    console.log("\nSua resposta '" + resp + "' foi grava com sucesso numa variável inútil");
+    leitor.close();
+});
