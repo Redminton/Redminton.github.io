@@ -65,9 +65,23 @@
       "server": "localhost",
       "port": 3306,
       "driver": "MariaDB",
-      "name": "127.0.0.1",
+      "name": "MariaDB teste",
       "database": "teste",
       "username": "root"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3307,
+      "driver": "MySQL",
+      "database": "banco",
+      "username": "root",
+      "name": "Mysql banco",
+      "askForPassword": true
     }
   ]
 }
