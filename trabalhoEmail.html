@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="0308.css" type="text/css" />
+    <title>Trabalho Validação de email</title>
+
+</head>
+<body style="background-image: linear-gradient(black, white);">
+    <div>
+        <input type="text" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span></input><br>
+           <br>
+        <input type="text" id="num2" value=""><span style="color: aqua;"> Digite seu URL (link): </span></input><br>
+           <br>
+        <input type="button" value="Verificar" onclick="adicionar()"></input>
+    </div>
+    <div class="resposta">
+        <h1><p id="resultado"></p></h1>
+        <h1><p id="resultado2"></p></h1>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>    
+    <div class="perf2"> 
+        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2> 
+        <h2><a href="https://redminton.github.io/">Acesse a Página Inicial</a></h2>
+    </div>
+   <script>
+            function adicionar() {
+                var x = null;
+                x = document.getElementById("num1").value;
+                var y = null;
+                y = document.getElementById("num2").value;
+                // pega o valor do formulário
+
+                var emailPadrao = /^([a-zA-Z0-9]+([_.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,4})$/;
+                // Verifica o email
+                var website = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.(com|tv|org|net|mil|edu|ca|co\.uk|com\.au|gov|br)$/i;
+                // Verifica o URL
+                var telefone = /^\(?\d{2}\)?[-\s]?\d{4,5}-?\d{4}$/;
+                // Verifica o telefone
+                var dataDeNascimento = /^([1-9]|[0-2][0-9]|3[0-1])\/([1-9]|1[0-2])\/\d{4}$/;
+                // Verifica a data de nascimento
+                var nome = /^[A-Za-zÀ-ÿ\s'-]+$/;
+                // Verifica o nome
+           
+                if (x.trim() === "") {
+                document.getElementById("resultado").innerHTML = "";
+            } else if (website.test(x)) {
+                document.getElementById("resultado").innerHTML = "O email é válido.";
+                document.getElementById("num1").value = "";
+            } else {
+                document.getElementById("resultado").innerHTML = "O email é inválido.";
+                document.getElementById("num1").value = "";
+            }
+            if (y.trim() === "") {
+                document.getElementById("resultado2").innerHTML = "";
+            } else if (website.test(y)) {
+                document.getElementById("resultado2").innerHTML = "O URL é válido.";
+                document.getElementById("num2").value = "";
+            } else {
+                document.getElementById("resultado2").innerHTML = "O URL é inválido.";
+                document.getElementById("num2").value = "";
+            }
+        }   
+                 
+            
+        
+        document.getElementById("num1").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+        document.getElementById("num2").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+   </script> 
+</body>
+</html>
