@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="0308.css" type="text/css" />
     <title>Trabalho Validação de email</title>
-
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+          /*  background-image: linear-gradient(black, white); */
+        }
+        .input-container {
+            max-width: 400px; 
+            margin: 0 auto; 
+            text-align: center;
+        }
+        .input-container2 {
+            max-width: 400px; 
+            margin: 0 auto; 
+            text-align: center;
+            color: azure;
+        }
+        .input-container input[type="email"],
+        .input-container input[type="text"],
+        .input-container input[type="tel"] {
+            width: 100%;
+        }
+    </style>
 </head>
-<body style="background-image: linear-gradient(black, white);">
-    <div>
-        <input type="email" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span></input><br>
-           <br>
-        <input type="text" id="num2" value=""><span style="color: aqua;"> Digite seu URL (link): </span></input><br>
-           <br>
-        <input type="tel" id="num3" value=""><span style="color: aqua;"> Digite seu Telefone: </span></input><br>
-           <br>
-        <input type="text" id="num4" value=""><span style="color: aqua;"> Digite sua data de nascimento: (com /)</span></input><br>
-           <br>
-        <input type="text" id="num5" value=""><span style="color: aqua;"> Digite seu Nome: </span></input><br>
-           <br>
-        <input type="button" value="Verificar" onclick="adicionar()"></input>
+<body>
+    <div class="input-container">
+        <h1 style="color: azure;">Validador de dadaos para formulários</h1>
+        <input type="email" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span><br><br>
+        <input type="text" id="num2" value=""><span style="color: aqua;"> Digite seu URL (link): </span><br><br>
+        <input type="tel" id="num3" value=""><span style="color: aqua;"> Digite seu Telefone: </span><br><br>
+        <input type="text" id="num4" value=""><span style="color: aqua;"> Digite sua data de nascimento: (com /)</span><br><br>
+        <input type="text" id="num5" value=""><span style="color: aqua;"> Digite seu Nome: </span><br><br>
+        <input type="button" value="Verificar" onclick="adicionar()">
     </div>
-    <div class="resposta">
+    <div class="input-container2">
         <h1><p id="resultado"></p></h1>
         <h1><p id="resultado2"></p></h1>
         <h1><p id="resultado3"></p></h1>
         <h1><p id="resultado4"></p></h1>
         <h1><p id="resultado5"></p></h1>
-    </div>
-    <br><br>
-    <br><br>
-    <br><br>   
-    <br><br>
-    <br><br>   
+    </div>   
     <div class="perf2"> 
         <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2> 
         <h2><a href="https://redminton.github.io/">Acesse a Página Inicial</a></h2>
