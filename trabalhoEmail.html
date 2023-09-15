@@ -9,15 +9,24 @@
 </head>
 <body style="background-image: linear-gradient(black, white);">
     <div>
-        <input type="text" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span></input><br>
+        <input type="email" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span></input><br>
            <br>
         <input type="text" id="num2" value=""><span style="color: aqua;"> Digite seu URL (link): </span></input><br>
+           <br>
+        <input type="tel" id="num3" value=""><span style="color: aqua;"> Digite seu Telefone: </span></input><br>
+           <br>
+        <input type="text" id="num4" value=""><span style="color: aqua;"> Digite sua data de nascimento: </span></input><br>
+           <br>
+        <input type="text" id="num5" value=""><span style="color: aqua;"> Digite seu Nome: </span></input><br>
            <br>
         <input type="button" value="Verificar" onclick="adicionar()"></input>
     </div>
     <div class="resposta">
         <h1><p id="resultado"></p></h1>
         <h1><p id="resultado2"></p></h1>
+        <h1><p id="resultado3"></p></h1>
+        <h1><p id="resultado4"></p></h1>
+        <h1><p id="resultado5"></p></h1>
     </div>
     <br><br>
     <br><br>
@@ -32,6 +41,12 @@
                 x = document.getElementById("num1").value;
                 var y = null;
                 y = document.getElementById("num2").value;
+                var z = null;
+                z = document.getElementById("num3").value;
+                var w = null;
+                w = document.getElementById("num4").value;
+                var v = null;
+                v = document.getElementById("num5").value;
                 // pega o valor do formulário
 
                 var emailPadrao = /^([a-zA-Z0-9]+([_.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,4})$/;
@@ -40,21 +55,22 @@
                 // Verifica o URL
                 var telefone = /^\(?\d{2}\)?[-\s]?\d{4,5}-?\d{4}$/;
                 // Verifica o telefone
-                var dataDeNascimento = /^([1-9]|[0-2][0-9]|3[0-1])\/([1-9]|1[0-2])\/\d{4}$/;
+                var dataDeNascimento = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19\d{2}|20\d{2})$/;
                 // Verifica a data de nascimento
                 var nome = /^[A-Za-zÀ-ÿ\s'-]+$/;
                 // Verifica o nome
            
-                if (x.trim() === "") {
+                if (x.trim() === "") { //Resultado sobre o email
                 document.getElementById("resultado").innerHTML = "";
-            } else if (website.test(x)) {
+            } else if (emailPadrao.test(x)) {
                 document.getElementById("resultado").innerHTML = "O email é válido.";
                 document.getElementById("num1").value = "";
             } else {
                 document.getElementById("resultado").innerHTML = "O email é inválido.";
                 document.getElementById("num1").value = "";
             }
-            if (y.trim() === "") {
+
+            if (y.trim() === "") { //Resultado sobre o URL
                 document.getElementById("resultado2").innerHTML = "";
             } else if (website.test(y)) {
                 document.getElementById("resultado2").innerHTML = "O URL é válido.";
@@ -63,16 +79,61 @@
                 document.getElementById("resultado2").innerHTML = "O URL é inválido.";
                 document.getElementById("num2").value = "";
             }
+
+            if (z.trim() === "") { //Resultado sobre o telefone
+                document.getElementById("resultado3").innerHTML = "";
+            } else if (telefone.test(z)) {
+                document.getElementById("resultado3").innerHTML = "O Telefone é válido.";
+                document.getElementById("num3").value = "";
+            } else {
+                document.getElementById("resultado3").innerHTML = "O Telefone é inválido.";
+                document.getElementById("num3").value = "";
+            }
+
+            if (w.trim() === "") { //Resultado sobre a data de nascimento
+                document.getElementById("resultado4").innerHTML = "";
+            } else if (dataDeNascimento.test(w)) {
+                document.getElementById("resultado4").innerHTML = "A data de nascimento é válida.";
+                document.getElementById("num4").value = "";
+            } else {
+                document.getElementById("resultado4").innerHTML = "A data de nascimento é inválida.";
+                document.getElementById("num4").value = "";
+            }
+
+            if (v.trim() === "") { //Resultado sobre o nome
+                document.getElementById("resultado5").innerHTML = "";
+            } else if (nome.test(v)) {
+                document.getElementById("resultado5").innerHTML = "O nome é válido.";
+                document.getElementById("num5").value = "";
+            } else {
+                document.getElementById("resultado5").innerHTML = "O nome é inválido.";
+                document.getElementById("num5").value = "";
+            }
         }   
                  
             
-        
+        //Função do botão enter
         document.getElementById("num1").addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
         document.getElementById("num2").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+        document.getElementById("num3").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+        document.getElementById("num4").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                adicionar();
+            }
+        });
+        document.getElementById("num5").addEventListener("keyup", function(event) {
             if (event.key === "Enter") {
                 adicionar();
             }
