@@ -1,0 +1,82 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    /*  background-image: linear-gradient(black, white); */
+}
+
+.perf {
+    color: blue;
+    text-align: center;
+}
+
+#imagem1 {
+
+    justify-content: center;
+    text-align: center;
+}
+
+.perf2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+
+}
+
+td {
+    text-align: left;
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.navigation {
+    display: none;
+    /* Inicialmente oculta o menu */
+}
+
+.expanded {
+    display: block;
+    /* Exibe o menu quando a classe "expanded" é adicionada */
+}
+
+li {
+    color: aliceblue;
+    font-size: large;
+}
+
+.navega {
+    text-align: left;
+}
+
+.navigation2 {
+    display: none;
+    /* Inicialmente oculta o menu */
+}
+
+.expanded2 {
+    display: block;
+    /* Exibe o menu quando a classe "expanded" é adicionada */
+}
+
+a:link {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00ffdd;
+    text-decoration: dotted;
+}
+
+.linkNav {
+    text-align: left;
+    display: flex;
+    width: 50%;
+}
