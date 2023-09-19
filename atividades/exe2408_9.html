@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="0308.css" type="text/css" />
     <title>Exercício 9 24/08</title>
 </head>
+
 <body style="background-image: linear-gradient(black, white);">
     <div>
-        <input type="number" id="num1" value=""><span style="color: aqua;"> 
+        <input type="number" id="num1" value=""><span style="color: aqua;">
             Digite a quantidade de números sorteados: </span>
         <br>
-        <input type="number" id="num2" value=""><span style="color: aqua;"> 
+        <input type="number" id="num2" value=""><span style="color: aqua;">
             Digite o primeiro número possível a ser sorteado: </span>
         <br>
-        <input type="number" id="num3" value=""><span style="color: aqua;"> 
+        <input type="number" id="num3" value=""><span style="color: aqua;">
             Digite o último número possível a ser sorteado: </span>
         <br><br>
         <input type="button" value="Sortear" onclick="adicionar()"></input>
     </div>
     <div class="resposta">
-        <h1><p id="resultado"></p></h1>
+        <h1>
+            <p id="resultado"></p>
+        </h1>
     </div>
     <br><br>
     <br><br>
@@ -45,12 +49,12 @@
             var z = parseInt(document.getElementById("num3").value);
             var resultado = [];
             while (resultado.length < x) {
-            var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
-            
-            if (!resultado.includes(aleatorio)) {
-                resultado.push(aleatorio);
-                                                }
-                                        }
+                var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
+
+                if (!resultado.includes(aleatorio)) {
+                    resultado.push(aleatorio);
+                }
+            }
             /*for(var i = 0; i < x; i++){
                 var aleatorio = Math.floor(Math.random() * (z - y + 1)) + y;
                 resultado.push(aleatorio);
@@ -61,22 +65,23 @@
             document.getElementById("num3").value = "";
             console.log(resultado);
         }
-        document.getElementById("num1").addEventListener("keyup", function(event) {
+        document.getElementById("num1").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 document.getElementById("num2").focus();
             }
         });
-        document.getElementById("num2").addEventListener("keyup", function(event) {
+        document.getElementById("num2").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 document.getElementById("num3").focus();
             }
         });
-        document.getElementById("num3").addEventListener("keyup", function(event) {
+        document.getElementById("num3").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
-              adicionar();
+                adicionar();
             }
         });
 
     </script>
 </body>
+
 </html>

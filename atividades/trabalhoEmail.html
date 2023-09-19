@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
     <title>Trabalho Validação de email</title>
     <style>
         .input-container {
-            max-width: 400px; 
-            margin: 0 auto; 
+            max-width: 400px;
+            margin: 0 auto;
             text-align: center;
         }
+
         .input-container2 {
-            max-width: 400px; 
-            margin: 0 auto; 
+            max-width: 400px;
+            margin: 0 auto;
             text-align: center;
             color: azure;
         }
+
         .input-container input[type="email"],
         .input-container input[type="text"],
         .input-container input[type="tel"] {
@@ -24,53 +27,65 @@
         }
     </style>
 </head>
+
 <body>
     <div class="input-container">
         <h1 style="color: azure;">Validador de dados para formulários</h1>
         <input type="email" id="num1" value=""><span style="color: aqua;"> Digite seu endereço de email: </span><br><br>
         <input type="text" id="num2" value=""><span style="color: aqua;"> Digite seu URL (link): </span><br><br>
         <input type="tel" id="num3" value=""><span style="color: aqua;"> Digite seu Telefone: </span><br><br>
-        <input type="text" id="num4" value=""><span style="color: aqua;"> Digite sua data de nascimento: (com /)</span><br><br>
+        <input type="text" id="num4" value=""><span style="color: aqua;"> Digite sua data de nascimento: (com
+            /)</span><br><br>
         <input type="text" id="num5" value=""><span style="color: aqua;"> Digite seu Nome: </span><br><br>
         <input type="button" value="Verificar" onclick="adicionar()">
     </div>
     <div class="input-container2">
-        <h1><p id="resultado"></p></h1>
-        <h1><p id="resultado2"></p></h1>
-        <h1><p id="resultado3"></p></h1>
-        <h1><p id="resultado4"></p></h1>
-        <h1><p id="resultado5"></p></h1>
-    </div>   
-    <div class="perf2"> 
-        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2> 
+        <h1>
+            <p id="resultado"></p>
+        </h1>
+        <h1>
+            <p id="resultado2"></p>
+        </h1>
+        <h1>
+            <p id="resultado3"></p>
+        </h1>
+        <h1>
+            <p id="resultado4"></p>
+        </h1>
+        <h1>
+            <p id="resultado5"></p>
+        </h1>
+    </div>
+    <div class="perf2">
+        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2>
         <h2>Meu Site: <a href="https://redminton.github.io/">Acesse aqui!</a></h2>
     </div>
-   <script>
-            function adicionar() {
-                var x = null;
-                x = document.getElementById("num1").value;
-                var y = null;
-                y = document.getElementById("num2").value;
-                var z = null;
-                z = document.getElementById("num3").value;
-                var w = null;
-                w = document.getElementById("num4").value;
-                var v = null;
-                v = document.getElementById("num5").value;
-                // pega o valor do formulário
+    <script>
+        function adicionar() {
+            var x = null;
+            x = document.getElementById("num1").value;
+            var y = null;
+            y = document.getElementById("num2").value;
+            var z = null;
+            z = document.getElementById("num3").value;
+            var w = null;
+            w = document.getElementById("num4").value;
+            var v = null;
+            v = document.getElementById("num5").value;
+            // pega o valor do formulário
 
-                var emailPadrao = /^([a-zA-Z0-9]+([_.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,4})$/;
-                // Verifica o email
-                var website = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.(com|tv|org|net|mil|edu|ca|co\.uk|com\.au|gov|br)$/i;
-                // Verifica o URL
-                var telefone = /^\(?\d{2}\)?[-\s]?\d{4,5}-?\d{4}$/;
-                // Verifica o telefone
-                var dataDeNascimento = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19\d{2}|20\d{2})$/;
-                // Verifica a data de nascimento
-                var nome = /^[A-Za-zÀ-ÿ\s'-]+$/;
-                // Verifica o nome
-           
-                if (x.trim() === "") { //Resultado sobre o email
+            var emailPadrao = /^([a-zA-Z0-9]+([_.-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,4})$/;
+            // Verifica o email
+            var website = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.(com|tv|org|net|mil|edu|ca|co\.uk|com\.au|gov|br)$/i;
+            // Verifica o URL
+            var telefone = /^\(?\d{2}\)?[-\s]?\d{4,5}-?\d{4}$/;
+            // Verifica o telefone
+            var dataDeNascimento = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19\d{2}|20\d{2})$/;
+            // Verifica a data de nascimento
+            var nome = /^[A-Za-zÀ-ÿ\s'-]+$/;
+            // Verifica o nome
+
+            if (x.trim() === "") { //Resultado sobre o email
                 document.getElementById("resultado").innerHTML = "";
             } else if (emailPadrao.test(x)) {
                 document.getElementById("resultado").innerHTML = "O email é válido.";
@@ -119,35 +134,36 @@
                 document.getElementById("resultado5").innerHTML = "O nome é inválido.";
                 document.getElementById("num5").value = "";
             }
-        }   
-                 
-            
+        }
+
+
         //Função do botão enter
-        document.getElementById("num1").addEventListener("keyup", function(event) {
+        document.getElementById("num1").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
-        document.getElementById("num2").addEventListener("keyup", function(event) {
+        document.getElementById("num2").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
-        document.getElementById("num3").addEventListener("keyup", function(event) {
+        document.getElementById("num3").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
-        document.getElementById("num4").addEventListener("keyup", function(event) {
+        document.getElementById("num4").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
-        document.getElementById("num5").addEventListener("keyup", function(event) {
+        document.getElementById("num5").addEventListener("keyup", function (event) {
             if (event.key === "Enter") {
                 adicionar();
             }
         });
-   </script> 
+    </script>
 </body>
+
 </html>
