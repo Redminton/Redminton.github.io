@@ -31,7 +31,7 @@ changeColorButton.addEventListener('click', () => {
 //_____________________________________________________________
 //modo Festa
 const festaBotao = document.getElementById('festa');
-const coresFesta = ['red', 'green', 'blue', 'yellow','black'];
+const coresFesta = ['red', 'green', 'blue', 'yellow', 'black'];
 let trocaAutomatica = null;
 function trocarCor() {
     body.style.backgroundColor = coresFesta[indiceCor];
@@ -50,7 +50,7 @@ festaBotao.addEventListener('click', () => {
         // Caso contrário, inicie a troca automática a cada 1000 milissegundos (1 segundo)
         trocaAutomatica = setInterval(trocarCor, 50);
     }
-}); 
+});
 
 
 //__________________________________________________________
@@ -58,17 +58,17 @@ festaBotao.addEventListener('click', () => {
 var dorime = document.getElementById("dorime");
 
 function playMusica() {
-  if (dorime.paused) {
-   dorime.play();
-  } else {
-    dorime.pause();
-  }
+    if (dorime.paused) {
+        dorime.play();
+    } else {
+        dorime.pause();
+    }
 }
 
 function playMusica2() {
-  if (brazinoaudio.paused) {
-   brazinoaudio.play();
-  } else {
-    brazinoaudio.pause();
-  }
+    if (brazinoaudio.paused) {
+        brazinoaudio.play();
+    } else {
+        brazinoaudio.pause();
+    }
 } 
