@@ -5,6 +5,8 @@
 body {
     background-color: #0f0f0f; /*
       background-image: linear-gradient(black, white); */
+      justify-content: center;
+      align-items: center;
 }
 
 
@@ -53,9 +55,15 @@ li {
 }
 
 .navega {
-    text-align: left;
+    text-align: center;
 }
-
+button{
+    border-radius: 20%;
+    border: none;
+    font-size: larger;
+    background-color: rgba(73, 71, 71, 0.37);
+    color: aliceblue;
+}
 .navigation2 {
     display: none;
     /* Inicialmente oculta o menu */
@@ -81,3 +89,19 @@ a:visited {
     display: flex;
     width: 50%;
 }
+.botaoD {
+    position: relative;
+    text-align: center;
+}
+.botao {
+    background-image: url('dorime.png');
+    background-color: transparent;
+    background-size: cover;
+    width: 300px; 
+    height: 300px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }

@@ -9,6 +9,7 @@ expandButton.addEventListener('click', () => {
 botaoRedes.addEventListener('click', () => {
     navigation2.classList.toggle('expanded2');
 });
+//_________________________________________________________________
 
 //Tema dark/light
 const changeColorButton = document.getElementById('tema');
@@ -27,3 +28,47 @@ changeColorButton.addEventListener('click', () => {
         indiceCor = 0;
     }
 });
+//_____________________________________________________________
+//modo Festa
+const festaBotao = document.getElementById('festa');
+const coresFesta = ['red', 'green', 'blue', 'yellow','black'];
+let trocaAutomatica = null;
+function trocarCor() {
+    body.style.backgroundColor = coresFesta[indiceCor];
+    indiceCor++;
+
+    if (indiceCor >= coresFesta.length) {
+        indiceCor = 0;
+    }
+}
+festaBotao.addEventListener('click', () => {
+    if (trocaAutomatica) {
+        // Se a troca automática estiver ocorrendo, pare-a
+        clearInterval(trocaAutomatica);
+        trocaAutomatica = null;
+    } else {
+        // Caso contrário, inicie a troca automática a cada 1000 milissegundos (1 segundo)
+        trocaAutomatica = setInterval(trocarCor, 50);
+    }
+}); 
+
+
+//__________________________________________________________
+//musica
+var dorime = document.getElementById("dorime");
+
+function playMusica() {
+  if (dorime.paused) {
+   dorime.play();
+  } else {
+    dorime.pause();
+  }
+}
+
+function playMusica2() {
+  if (brazinoaudio.paused) {
+   brazinoaudio.play();
+  } else {
+    brazinoaudio.pause();
+  }
+} 
