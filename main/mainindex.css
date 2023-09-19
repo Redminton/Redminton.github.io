@@ -3,9 +3,10 @@
 }
 
 body {
-    background-color: rgb(20, 20, 20);
-    /*  background-image: linear-gradient(black, white); */
+    background-color: #0f0f0f; /*
+      background-image: linear-gradient(black, white); */
 }
+
 
 .perf {
     color: blue;
