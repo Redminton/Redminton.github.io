@@ -43,8 +43,7 @@ td {
 .navigation {
     display: none;
     /* Inicialmente oculta o menu */
-}
-
+}   
 .expanded {
     display: block;
     /* Exibe o menu quando a classe "expanded" é adicionada */
