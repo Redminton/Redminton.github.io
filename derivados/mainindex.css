@@ -1,0 +1,111 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    /*
+      background-image: linear-gradient(black, white); */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.perf {
+    color: blue;
+    text-align: center;
+}
+
+#imagem1 {
+
+    justify-content: center;
+    text-align: center;
+}
+
+.perf2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+
+}
+
+td {
+    text-align: left;
+    padding-left: 6%;
+    padding-right: 6%;
+
+}
+
+.navigation {
+    display: none;
+    /* Inicialmente oculta o menu */
+}   
+.expanded {
+    display: block;
+    /* Exibe o menu quando a classe "expanded" é adicionada */
+}
+
+li {
+    color: aliceblue;
+    font-size: large;
+}
+
+.navega {
+    text-align: center;
+}
+button {
+    border-radius: 20%;
+    border: none;
+    font-size: larger;
+    background-color: rgba(73, 71, 71, 0.37);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.navigation2 {
+    display: none;
+    /* Inicialmente oculta o menu */
+}
+
+.expanded2 {
+    display: block;
+    /* Exibe o menu quando a classe "expanded" é adicionada */
+}
+
+a:link {
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00ffdd;
+    text-decoration: dotted;
+}
+
+.linkNav {
+    text-align: left;
+    display: flex;
+    width: 50%;
+}
+
+.botaoD {
+    position: relative;
+    text-align: center;
+}
+
+.botao {
+    background-image: url('dorime.png');
+    background-color: transparent;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="main/icone.ico">
+    <link rel="stylesheet" href="/derivados/mainindex.css" type="text/css" />
+    <title>Data e Hora</title>
+    <audio id="dorime" src="main/dorime.mp3" preload="auto"></audio>
+    <audio id="brazinoaudio" src="main/DescubraMP3.mp3" preload="auto"></audio>
+
+</head>
+
+<body>
+    <div class="navega">
+        <button id="expandButton">Link atividades</button> <!-- Botão para expandir o menu -->
+        <button id="botaoRedes"> Redes Sociais</button>
+        <button id="tema">Tema</button>
+        <button id="festa">Eplepsia</button>
+        <!--<button id="brazino" onclick="playMusica2()">DescubraMP3</button>-->
+        <button id="kabyte" onclick="window.location.href='https://redminton.github.io/kabyte/'">Kabyte</button>
+        <button id="Caravelle" onclick="window.location.href='https://redminton.github.io/Caravelle/'">Caravelle</button>
+    </div>
+    
+    <div class="linkNav">
+        <div>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="/atividades/exe2.html">Exercício 2 (tabelas)</a></li>
+                    <li><a href="/atividades/trabalhoEmail.html">Trabalho sobre validação de formulários</a></li>
+                    <li><a href="/atividades/exe2408_1.html">Exercício da Calculadora</a></li>
+                    <li><a href="/atividades/exe2408_2.html">Exercício da Lista de Compras</a></li>
+                    <li><a href="/atividades/exe2408_3.html">Exercício do conversor C em Fh</a></li>
+                    <li><a href="/atividades/exe2408_4.html">Exercício do maior menor</a></li>
+                    <li><a href="/atividades/exe2408_5.html">Exercício do verificador de email</a></li>
+                    <li><a href="/atividades/exe2408_6.html">Exercício do verificador de número primo</a></li>
+                    <li><a href="/atividades/exe2408_7.html">Exercício da Calculadora de médias</a></li>
+                    <li><a href="/atividades/exe2408_8.html">Exercício do verificador de Palíndromos</a></li>
+                    <li><a href="/atividades/exe2408_9.html">Exercício do sorteio da Mega Sena</a></li>
+                    <li><a href="/atividades/exe2408_10.html">Exercício do Jogo da forca</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <ul class="navigation2">
+                    <li>
+                        <h2>Github: <a href="https://github.com/Redminton">Acesse aqui!</a></h2>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<table style="border: 1;">
+<tr>
+    <td>
+        <?php
+        $tempo = time();
+        date_default_timezone_set('America/Sao_Paulo');
+        echo("<b>Data e Hora Local:</b><br>");
+        ?>
+    </td>
+</tr>
+<tr>
+    <td>
+        <?php
+        echo("<b>Dia do Mês:</b> ".date("d",$tempo)."<br>");
+        echo("<b>Mês:</b> ".date("F",$tempo)."<br>");
+        echo("<b>Ano:</b> ".date("Y",$tempo)."<br>");
+        echo("<b>Hora:</b> ".date('H:i:s',$tempo)."<br>");
+        ?>
+    </td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/main/mainJS.js"></script>
+</body>
+
+</html>
