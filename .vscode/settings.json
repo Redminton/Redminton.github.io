@@ -83,5 +83,6 @@
       "name": "Mysql banco",
       "askForPassword": true
     }
-  ]
+  ],
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
