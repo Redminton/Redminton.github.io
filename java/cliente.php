@@ -15,6 +15,15 @@
 </head>
 
 <body>
+    <h1>
+        Exemplo AJAX com PHP e Jquery
+    </h1>
+    <form action>
+
+    </form>
+
+
+
 
 </body>
 
