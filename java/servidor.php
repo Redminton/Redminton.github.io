@@ -4,7 +4,7 @@ $host = 'localhost'; // Endereço do servidor MySQL
 $db = 'test';    // Nome do banco de dados
 $user = 'root';      // Nome de usuário do MySQL
 $pass = '';          // Senha do MySQL
-
+sleep(2);
 try {
     // Conecta ao banco de dados usando PDO
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
