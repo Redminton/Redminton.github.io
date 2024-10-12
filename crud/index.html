@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Produtos</title>
+    <title>CRUD Produtos com Bootstrap</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            padding: 20px;
+            background-color: RGB(1, 35, 60);
+            color: aliceblue;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        table {
+            background-color: aliceblue;
+        }
+
+        tbody {
+            color: rgb(0, 0, 0);
+        }
+
+        nav img {
+            justify-content: center;
+            margin-left: 40%;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Gerenciar Produtos</h1>
+    <nav><img src="img.png" width="20%"></img></nav>
+    <div class="container">
+        <h1 class="text-center">Gerenciar Produtos</h1>
 
-    <!-- Formulário para adicionar/editar produto -->
-    <form id="produtoForm">
-        <input type="hidden" id="id_produto" name="id_produto">
-        <label for="id_categoria">Categoria:</label>
-        <select id="id_categoria" name="id_categoria"></select><br>
-        <label for="descr_produto">Descrição:</label>
-        <input type="text" id="descr_produto" name="descr_produto" required><br>
-        <label for="valor">Valor:</label>
-        <input type="number" step="0.01" id="valor" name="valor" required><br>
-        <button type="submit">Salvar</button>
-    </form>
 
-    <!-- Tabela para listar produtos -->
-    <table id="tabelaProdutos">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Categoria</th>
-                <th>Descrição</th>
-                <th>Valor</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Produtos serão inseridos aqui via AJAX -->
-        </tbody>
-    </table>
+        <form id="produtoForm">
+            <input type="hidden" id="id_produto" name="id_produto">
 
+            <div class="mb-3">
+                <label for="id_categoria" class="form-label">Categoria:</label>
+                <select id="id_categoria" name="id_categoria" class="form-select" required>
+                    <option value="" disabled selected>Escolha uma categoria</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Produto:</label>
+                <input type="text" id="nome" name="nome" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="quantidade" class="form-label">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="descr_produto" class="form-label">Descrição:</label>
+                <input type="text" id="descr_produto" name="descr_produto" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="valor" class="form-label">Valor:</label>
+                <input type="number" step="0.01" id="valor" name="valor" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+
+        <table id="tabelaProdutos" class="table table-hover mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Produtos serão inseridos aqui via AJAX -->
+            </tbody>
+        </table>
+
+    </div>
+    <p class="text-center"> 2024 João Vítor Dores dos Santos By
+        <a class="text-white nav-item" href="https://redminton.github.io">Redminton.cloud</a>
+    </p>
     <script>
         $(document).ready(function () {
             carregarCategorias();
@@ -65,21 +126,24 @@
                     success: function (produtos) {
                         let linhas = '';
                         produtos.forEach(function (produto) {
-                            linhas += `<tr>
-                                <td>${produto.id_produto}</td>
-                                <td>${produto.nome_categoria}</td>
-                                <td>${produto.descr_produto}</td>
-                                <td>${produto.valor}</td>
-                                <td>
-                                    <button onclick="editarProduto(${produto.id_produto})">Editar</button>
-                                    <button onclick="deletarProduto(${produto.id_produto})">Deletar</button>
-                                </td>
-                            </tr>`;
+                            linhas += `<tr >
+                                    <td>${produto.id_produto}</td>
+                                    <td>${produto.nome_categoria}</td>
+                                    <td>${produto.nome}</td> 
+                                    <td>${produto.valor}</td>
+                                     <td>${produto.descr_produto}</td>
+                                    <td>${produto.quantidade}</td> 
+                                    <td>
+                                        <button class="btn btn-sm btn-warning me-1" onclick="editarProduto(${produto.id_produto})">Editar</button>
+                                        <button class="btn btn-sm btn-danger" onclick="deletarProduto(${produto.id_produto})">Deletar</button>
+                                    </td>
+                                </tr>`;
                         });
                         $('#tabelaProdutos tbody').html(linhas);
                     }
                 });
             }
+
 
             // Submissão do formulário via AJAX
             $('#produtoForm').on('submit', function (e) {
@@ -90,6 +154,7 @@
                     method: 'POST',
                     data: dados,
                     success: function (response) {
+
                         carregarProdutos();
                         $('#produtoForm')[0].reset();  // Limpar o formulário
                     }
@@ -107,8 +172,10 @@
                 success: function (produto) {
                     $('#id_produto').val(produto.id_produto);
                     $('#id_categoria').val(produto.id_categoria);
+                    $('#nome').val(produto.nome);
                     $('#descr_produto').val(produto.descr_produto);
                     $('#valor').val(produto.valor);
+                    $('#quantidade').val(produto.quantidade);
                 }
             });
         }
@@ -121,11 +188,15 @@
                     method: 'POST',
                     data: { id_produto: id_produto },
                     success: function (response) {
+                        console.log('delete');
                         carregarProdutos();
+
                     }
                 });
             }
         }
+
     </script>
 </body>
+
 </html>
