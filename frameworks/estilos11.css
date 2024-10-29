@@ -3,6 +3,11 @@ body {
     font: normal 15pt Arial;
 }
 
+h1 {
+    color: black;
+    margin-top: 15%;
+}
+
 header {
     color: aliceblue;
     text-align: center;
