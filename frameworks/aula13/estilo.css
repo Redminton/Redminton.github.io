@@ -1,0 +1,35 @@
+body {
+    background-image: url(https://batistamemorialolinda.wordpress.com/wp-content/uploads/2015/01/background-preto-fundo.jpg);
+
+    font: normal 15pt Arial;
+    color: aliceblue;
+}
+
+header {
+    color: aliceblue;
+    text-align: center;
+}
+
+section {
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+}
+
+div {
+    text-align: center;
+    padding: 8px;
+}
+
+footer {
+    color: aliceblue;
+    text-align: center;
+    font-style: italic;
+}
+
+.container {
+    background: rgba(104, 185, 165, 0.356);
+}
