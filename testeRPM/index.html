@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor OBD2 - RPM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .rpm-box {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff0000;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Monitor de RPM via OBD2</h1>
+    <div class="rpm-box" id="rpmValue">Aguardando dados...</div>
+    <button onclick="startMonitor()">Iniciar Monitoramento</button>
+
+    <script>
+        function startMonitor() {
+            setInterval(() => {
+                fetch("obd2.php")
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("rpmValue").innerText = data.rpm ? data.rpm + " RPM" : "Erro ao obter RPM";
+                    })
+                    .catch(error => {
+                        console.error("Erro:", error);
+                        document.getElementById("rpmValue").innerText = "Erro na comunicação!";
+                    });
+            }, 1000); // Atualiza a cada 1 segundo
+        }
+    </script>
+</body>
+
+</html>
